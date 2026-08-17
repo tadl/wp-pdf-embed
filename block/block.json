@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wp-pdf-embed/pdf",
+  "version": "1.0.0",
+  "title": "PDF Embed",
+  "category": "media",
+  "icon": "pdf",
+  "description": "Embed a PDF with page navigation and zoom controls.",
+  "keywords": ["pdf", "document", "viewer"],
+  "textdomain": "wp-pdf-embed",
+  "attributes": {
+    "attachmentId": { "type": "number", "default": 0 },
+    "url": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "width": { "type": "string", "default": "100%" },
+    "height": { "type": "number", "default": 700 },
+    "initialPage": { "type": "number", "default": 1 },
+    "showToolbar": { "type": "boolean", "default": true },
+    "allowDownload": { "type": "boolean", "default": true },
+    "continuousScroll": { "type": "boolean", "default": true },
+    "showSearch": { "type": "boolean", "default": true },
+    "openLinksNewTab": { "type": "boolean", "default": true },
+    "trackEvents": { "type": "boolean", "default": false },
+    "mobileWidth": { "type": "number", "default": 500 },
+    "mobileText": { "type": "string", "default": "View PDF full screen" },
+    "disableDeviceZoom": { "type": "boolean", "default": false }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:./editor.css"
+}

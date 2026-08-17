@@ -1,0 +1,230 @@
+.wp-pdf-embed {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	min-height: 200px;
+	border: 1px solid #dcdcde;
+	background: #525659;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.wp-pdf-embed__toolbar {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 6px;
+	min-height: 42px;
+	padding: 5px 8px;
+	color: #fff;
+	background: #323639;
+	box-sizing: border-box;
+}
+
+.wp-pdf-embed__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 0;
+	border-radius: 3px;
+	color: #fff;
+	background: transparent;
+	font: 600 18px/1 sans-serif;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.wp-pdf-embed__button:hover,
+.wp-pdf-embed__button:focus-visible {
+	color: #fff;
+	background: #4c5053;
+	outline: 2px solid #72aee6;
+	outline-offset: 1px;
+}
+
+.wp-pdf-embed__button:disabled {
+	opacity: 0.35;
+	cursor: default;
+}
+
+.wp-pdf-embed__page-input {
+	width: 54px;
+	height: 30px;
+	padding: 2px 4px;
+	border: 1px solid #73777a;
+	border-radius: 2px;
+	background: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+
+.wp-pdf-embed__page-count {
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.wp-pdf-embed__spacer {
+	flex: 1;
+}
+
+.wp-pdf-embed__viewport {
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
+	padding: 16px;
+	overflow: auto;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.wp-pdf-embed__pages {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	min-width: max-content;
+}
+
+.wp-pdf-embed__page {
+	position: relative;
+	flex: 0 0 auto;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.wp-pdf-embed__page[hidden] {
+	display: none;
+}
+
+.wp-pdf-embed__canvas {
+	display: inline-block;
+	max-width: none;
+	vertical-align: top;
+	background: #fff;
+}
+
+.wp-pdf-embed__annotations,
+.wp-pdf-embed__highlights {
+	position: absolute;
+	inset: 0;
+}
+
+.wp-pdf-embed__highlights {
+	pointer-events: none;
+}
+
+.wp-pdf-embed__annotation-link {
+	position: absolute;
+	border: 1px solid transparent;
+	background: rgba(255, 255, 0, 0.001);
+}
+
+.wp-pdf-embed__annotation-link:hover,
+.wp-pdf-embed__annotation-link:focus-visible {
+	border-color: rgba(0, 102, 204, 0.75);
+	background: rgba(0, 102, 204, 0.12);
+	outline: 2px solid #0066cc;
+}
+
+.wp-pdf-embed__highlight {
+	position: absolute;
+	background: rgba(255, 225, 0, 0.45);
+	box-shadow: 0 0 0 1px rgba(180, 135, 0, 0.35);
+}
+
+.wp-pdf-embed__highlight.is-current {
+	background: rgba(255, 145, 0, 0.65);
+	box-shadow: 0 0 0 2px #d85b00;
+}
+
+.wp-pdf-embed__search {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 8px;
+	color: #fff;
+	background: #24282b;
+}
+
+.wp-pdf-embed__search[hidden] {
+	display: none;
+}
+
+.wp-pdf-embed__search-input {
+	flex: 1 1 180px;
+	min-width: 80px;
+	max-width: 360px;
+	height: 32px;
+	padding: 4px 8px;
+	border: 1px solid #73777a;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.wp-pdf-embed__search-status {
+	min-width: 90px;
+	font-size: 12px;
+}
+
+.wp-pdf-embed__mobile-prompt {
+	position: absolute;
+	inset: 0;
+	z-index: 5;
+	width: 100%;
+	border: 0;
+	color: #fff;
+	background: rgba(35, 39, 42, 0.94);
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.wp-pdf-embed__mobile-prompt[hidden] {
+	display: none;
+}
+
+.wp-pdf-embed--device-zoom-disabled .wp-pdf-embed__viewport {
+	touch-action: pan-x pan-y;
+}
+
+.wp-pdf-embed:fullscreen,
+.wp-pdf-embed.is-fullscreen {
+	width: 100% !important;
+	height: 100% !important;
+	border: 0;
+}
+
+.wp-pdf-embed__status {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 10px 14px;
+	border-radius: 3px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.75);
+	transform: translate(-50%, -50%);
+}
+
+.wp-pdf-embed__status--error {
+	width: min(80%, 420px);
+	background: #8a2424;
+}
+
+@media (max-width: 480px) {
+	.wp-pdf-embed__toolbar {
+		gap: 2px;
+		padding-inline: 4px;
+	}
+
+	.wp-pdf-embed__button {
+		width: 30px;
+	}
+
+	.wp-pdf-embed__viewport {
+		padding: 8px;
+	}
+}
