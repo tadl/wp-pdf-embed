@@ -4,7 +4,7 @@ Tags: pdf, embed, document, viewer, block
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,10 @@ No. The included PDF.js library renders the file in the visitor's browser.
 Browsers require the remote server to allow your site's origin with CORS headers. Upload the PDF to the WordPress Media Library if you do not control the remote server.
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Add a native PDF Embed element for Avada Builder and Avada Live.
 
 = 1.0.1 =
 
