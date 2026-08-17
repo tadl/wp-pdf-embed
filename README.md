@@ -24,6 +24,15 @@ There is no JavaScript build step. Install this directory directly as a plugin, 
 
 The release contains the plugin runtime files, `README.md`, and WordPress `readme.txt`. Development scripts, tests, and the `docs/` directory are excluded.
 
+Update all plugin version fields before building a new release:
+
+```sh
+./scripts/bump-version.sh 1.0.1
+./scripts/build-release.sh
+```
+
+Add the release notes to the changelog in `readme.txt` before committing the version bump.
+
 Run basic syntax checks:
 
 ```sh
