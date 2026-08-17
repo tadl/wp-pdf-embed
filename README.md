@@ -4,7 +4,7 @@ A self-contained WordPress plugin for embedding local Media Library PDFs with a 
 
 The viewer includes continuous scrolling, jump-to-page navigation, text search and highlighting, internal and external PDF links, full-screen/mobile behavior, optional downloads, and opt-in view/download counts.
 
-See [`docs/USER-GUIDE.md`](docs/USER-GUIDE.md) for instructions written for site editors and content managers.
+See [`docs/USER-GUIDE.md`](docs/USER-GUIDE.md) for general instructions or [`docs/AVADA-USER-GUIDE.md`](docs/AVADA-USER-GUIDE.md) for the complete Avada workflow.
 
 ## Shortcode
 

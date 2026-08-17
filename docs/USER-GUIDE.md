@@ -107,6 +107,8 @@ When Avada Builder is active, the plugin provides a native **PDF Embed** design 
 
 If the element is not listed after updating the plugin, reload the builder. Also check **Avada → Options → Builder Options → Avada Builder Elements** to make sure PDF Embed has not been disabled for the current user role.
 
+For detailed Avada instructions and troubleshooting, see [WP PDF Embed guide for Avada users](AVADA-USER-GUIDE.md).
+
 ## Viewer controls
 
 The toolbar can include the following controls:
