@@ -21,5 +21,7 @@ define( 'WP_PDF_EMBED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WP_PDF_EMBED_URL', plugin_dir_url( __FILE__ ) );
 
 require_once WP_PDF_EMBED_DIR . 'includes/class-wp-pdf-embed.php';
+require_once WP_PDF_EMBED_DIR . 'includes/class-wp-pdf-embed-avada.php';
 
 WP_PDF_Embed::instance();
+WP_PDF_Embed_Avada::instance();

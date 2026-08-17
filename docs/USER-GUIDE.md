@@ -94,6 +94,19 @@ When Elementor is active, the plugin provides a **PDF Embed** widget.
 4. Choose a PDF from the Media Library.
 5. Configure the height, initial page, scrolling, search, download, and tracking options in the widget settings.
 
+## Avada Builder
+
+When Avada Builder is active, the plugin provides a native **PDF Embed** design element.
+
+1. Edit the page with Avada Builder or Avada Live.
+2. Add a Container and Column if the page does not already have one.
+3. Select **Add Element** inside the column.
+4. Search for **PDF Embed** and select it.
+5. Choose or upload a PDF in the element's **Document** settings.
+6. Configure its layout, viewer controls, activity tracking, and mobile behavior in the other settings tabs.
+
+If the element is not listed after updating the plugin, reload the builder. Also check **Avada → Options → Builder Options → Avada Builder Elements** to make sure PDF Embed has not been disabled for the current user role.
+
 ## Viewer controls
 
 The toolbar can include the following controls:

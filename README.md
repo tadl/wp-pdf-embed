@@ -1,6 +1,6 @@
 # WP PDF Embed
 
-A self-contained WordPress plugin for embedding local Media Library PDFs with a Gutenberg block, classic-editor media button, Elementor widget, or the `[wp_pdf_embed]` shortcode. PDFs are rendered in the browser with a vendored copy of Mozilla PDF.js; there is no hosted service or subscription.
+A self-contained WordPress plugin for embedding local Media Library PDFs with a Gutenberg block, classic-editor media button, Avada Builder element, Elementor widget, or the `[wp_pdf_embed]` shortcode. PDFs are rendered in the browser with a vendored copy of Mozilla PDF.js; there is no hosted service or subscription.
 
 The viewer includes continuous scrolling, jump-to-page navigation, text search and highlighting, internal and external PDF links, full-screen/mobile behavior, optional downloads, and opt-in view/download counts.
 

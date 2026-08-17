@@ -27,6 +27,7 @@ Features:
 * Optional view and download counts shown in Media Library details.
 * Full-screen viewing and configurable mobile behavior.
 * Elementor widget when Elementor is active.
+* Native Avada Builder design element when Avada Builder is active.
 * Password-protected PDF support.
 * No CDN, account, tracking, or subscription.
 
