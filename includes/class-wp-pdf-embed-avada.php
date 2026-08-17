@@ -16,6 +16,9 @@ final class WP_PDF_Embed_Avada {
 	/** @var bool */
 	private $registered = false;
 
+	/** @var bool */
+	private $assets_enqueued = false;
+
 	/**
 	 * Return the integration instance.
 	 *
@@ -32,6 +35,8 @@ final class WP_PDF_Embed_Avada {
 	private function __construct() {
 		add_shortcode( 'wp_pdf_embed_avada', array( $this, 'render' ) );
 		add_action( 'fusion_builder_before_init', array( $this, 'register_element' ) );
+		add_action( 'fusion_builder_admin_scripts_hook', array( $this, 'enqueue_builder_assets' ) );
+		add_action( 'fusion_builder_enqueue_live_scripts', array( $this, 'enqueue_builder_assets' ) );
 	}
 
 	/**
@@ -65,14 +70,12 @@ final class WP_PDF_Embed_Avada {
 						'param_name'   => 'pdf_url',
 						'value'        => '',
 						'dynamic_data' => true,
-						'group'        => esc_attr__( 'Document', 'wp-pdf-embed' ),
 					),
 					array(
 						'type'        => 'textfield',
 						'heading'     => esc_attr__( 'Document title', 'wp-pdf-embed' ),
 						'param_name'  => 'title',
 						'value'       => '',
-						'group'       => esc_attr__( 'Document', 'wp-pdf-embed' ),
 					),
 					array(
 						'type'        => 'textfield',
@@ -133,6 +136,34 @@ final class WP_PDF_Embed_Avada {
 						'group'       => esc_attr__( 'Extras', 'wp-pdf-embed' ),
 					),
 				),
+			)
+		);
+	}
+
+	/**
+	 * Replace Avada's image-only upload preview with a PDF document tile.
+	 *
+	 * @return void
+	 */
+	public function enqueue_builder_assets() {
+		if ( $this->assets_enqueued ) {
+			return;
+		}
+
+		$this->assets_enqueued = true;
+		wp_enqueue_script(
+			'wp-pdf-embed-avada-builder',
+			WP_PDF_EMBED_URL . 'assets/js/avada-builder.js',
+			array(),
+			WP_PDF_EMBED_VERSION,
+			true
+		);
+		wp_localize_script(
+			'wp-pdf-embed-avada-builder',
+			'wpPdfEmbedAvada',
+			array(
+				'previewUrl' => WP_PDF_EMBED_URL . 'assets/images/pdf-preview.svg',
+				'previewAlt' => __( 'Selected PDF document', 'wp-pdf-embed' ),
 			)
 		);
 	}
