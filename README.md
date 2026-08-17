@@ -16,12 +16,13 @@ Additional mobile attributes are `mobilewidth`, `mobiletext`, and `disablezoom`.
 
 ## Development
 
-There is no JavaScript build step. Install this directory directly as a plugin, or create a release zip from its parent directory:
+There is no JavaScript build step. Install this directory directly as a plugin, or create a clean release ZIP in `dist/`:
 
 ```sh
-zip -r wp-pdf-embed.zip wp-pdf-embed \
-  -x 'wp-pdf-embed/.git/*' 'wp-pdf-embed/node_modules/*'
+./scripts/build-release.sh
 ```
+
+The release contains the plugin runtime files, `README.md`, and WordPress `readme.txt`. Development scripts, tests, and the `docs/` directory are excluded.
 
 Run basic syntax checks:
 
