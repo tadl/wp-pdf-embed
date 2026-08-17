@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       WP PDF Embed
  * Description:       Embed self-hosted PDF documents with a Gutenberg block or the [wp_pdf_embed] shortcode.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            WP PDF Embed Contributors
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WP_PDF_EMBED_VERSION', '1.0.2' );
+define( 'WP_PDF_EMBED_VERSION', '1.0.3' );
 define( 'WP_PDF_EMBED_FILE', __FILE__ );
 define( 'WP_PDF_EMBED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WP_PDF_EMBED_URL', plugin_dir_url( __FILE__ ) );
