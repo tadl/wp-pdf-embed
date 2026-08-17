@@ -102,7 +102,7 @@ When Avada Builder is active, the plugin provides a native **PDF Embed** design 
 2. Add a Container and Column if the page does not already have one.
 3. Select **Add Element** inside the column.
 4. Search for **PDF Embed** and select it.
-5. Choose or upload a PDF in the element's **Document** settings.
+5. Choose or upload a PDF in the element's **General** settings. A PDF document tile confirms the selection.
 6. Configure its layout, viewer controls, activity tracking, and mobile behavior in the other settings tabs.
 
 If the element is not listed after updating the plugin, reload the builder. Also check **Avada → Options → Builder Options → Avada Builder Elements** to make sure PDF Embed has not been disabled for the current user role.
