@@ -50,15 +50,22 @@
 	cursor: default;
 }
 
-.wp-pdf-embed__page-input {
-	width: 54px;
-	height: 30px;
+body .wp-pdf-embed .wp-pdf-embed__toolbar .wp-pdf-embed__page-input {
+	display: inline-block;
+	flex: 0 0 54px !important;
+	width: 54px !important;
+	min-width: 54px !important;
+	max-width: 54px !important;
+	height: 30px !important;
+	margin: 0;
 	padding: 2px 4px;
 	border: 1px solid #73777a;
 	border-radius: 2px;
 	background: #fff;
 	font-size: 14px;
+	line-height: 1;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 .wp-pdf-embed__page-count {
